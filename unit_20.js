@@ -214,17 +214,21 @@ function t11(event) {
         key = 'space';
     } else if (event.keyCode == +17) {
         key = 'ctrl';
+    } else if (event.keyCode == +13) {
+        key = 'enter';
+    } else if (event.keyCode == +18) {
+        key = 'alt';
     }
 
     // 5. Ищем кнопку:
     let button = document.querySelector(`.keyboard[data="${key}"]`);
     console.log('button:', button);
 
-
-
     // 6. Теперь button через classList добавляем класс .active
+    
     button.classList.add("active");
+
+
 }
 
 document.querySelector('.i-11').onkeydown = t11;
-
